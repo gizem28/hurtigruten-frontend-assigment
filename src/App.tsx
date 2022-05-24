@@ -1,10 +1,17 @@
-import React from 'react';
+// import {useState} from 'react';
+import Searchbar from './components/Searchbar';
 
 function App() {
+
+  // const [searchResult, setSearchResult] = useState ("");
+
   return (
-    <p>
-      Edit <code>src/App.tsx</code> and save to reload.
-    </p>
+    <div className='container'>
+    <Searchbar
+    //  setSearchResult={setSearchResult}
+     />
+    </div>
+    
   );
 }
 

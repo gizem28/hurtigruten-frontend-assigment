@@ -11,3 +11,129 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  background:gainsboro;
+}
+
+.container {
+  margin: 200px auto;
+  width: 500px;
+  height: 60px;
+}
+
+/* The point of this tutorial is here */
+.form {
+  display: flex;
+  flex-direction: row;
+}
+.search-field {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+  border: none;
+  outline: none;
+  box-shadow: inner 0 0 4px rgba(0, 0, 0, 0,9);
+}
+
+.glass-button {
+  /* background: transparent; */
+  border: none;
+  outline: none;
+  margin-left: -43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  background: white;
+}
+
+.glass-button img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  height: 25px;
+  /* margin-right: 10px; */
+}
+
+.cross-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  background: #0F4FA8;
+  cursor: pointer;
+  margin-left: -20px;
+    /* position: absolute;
+    top: 0;*/
+    /* left: 100%;  */
+   /* width: 20px; */
+    transition: 0.2s;
+}
+
+.cross-button img {
+  width: 20px;
+  height: 15px;
+  /* object-fit: cover; */
+  color: white;
+  height: 25px;
+}
+
+input:focus{
+  /* outline: none;
+  border:2px solid blue; */
+ outline: 2px solid #0F4FA8;
+
+}
+
+input::placeholder:focus{
+  color: white;
+}
+
+
+.result-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.result-table  td, .result-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.result-table  tr:nth-child(even){background-color: #f2f2f2;}
+
+.result-table  tr:hover {background-color: #ddd;}
+
+.result-table  th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3c7cd6;
+  color: white;
+}
+
+.down-button{
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transform:rotate(180deg);
+  transition: 0.2s;
+}
+
+
+.y-arrow{
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
