@@ -8,6 +8,7 @@ const Searchbar = (setSearchResult) => {
   const [search, setSearch] = useState('');
   const [error, setError] = useState(null);
   const [show, setShow] = useState(false);
+  const [query, setQuery] = useState('');
 
   // useEffect(() => {
   //   fetch(`http://localhost:4000/api/ships/${search}`)
@@ -49,6 +50,7 @@ const Searchbar = (setSearchResult) => {
           type="text"
           placeholder="Search"
           className="search-field"
+          aria-label="Search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -65,7 +67,13 @@ const Searchbar = (setSearchResult) => {
         </button>
       </form>
       <div>
-        {result.map((ship) => (
+        {/* {result.filter((ships) => {
+          if (query === ' ') {
+            return ships;
+          }else if(ships.heading.toLowerCase().includes(query.toLowerCase())){
+            return ships;
+          }}). */}
+          {result.map((ship) => (
           <table className="result-table" key={ship.shipId}>
             <tr>
               <th></th>
@@ -74,7 +82,7 @@ const Searchbar = (setSearchResult) => {
             </tr>
             <tr>
               <td>
-                <button className="down-button" onClick={setShow}>
+                <button className="down-button" onClick={toggleShow}>
                   <img src={arrow} className="arrow" alt="Down Arrow" />
                 </button>
               </td>

@@ -11,8 +11,8 @@ server.listen(port, () => {
 });
 
 server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin","*"); // Added to prevent localhost CORS issues
-  res.header("Access-Control-Allow-Headers","*"); // Added to prevent localhost CORS issues
+  res.header("Access-Control-Allow-Origin","*");
+  res.header("Access-Control-Allow-Headers","*"); 
   next();
 })
 
